@@ -1,6 +1,6 @@
-require "eden_events/version"
+require "cli_test_one/version"
 
-module EdenEvents
+module CliTestOne
   class Error < StandardError; end
   # Your code goes here...
 end

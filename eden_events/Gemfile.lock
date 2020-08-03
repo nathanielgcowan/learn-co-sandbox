@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     eden_events (0.1.0)
-      nokogiri
 
 GEM
   remote: https://rubygems.org/
@@ -23,6 +22,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   eden_events!
+  nokogiri
   pry
   rake (~> 10.0)
 
