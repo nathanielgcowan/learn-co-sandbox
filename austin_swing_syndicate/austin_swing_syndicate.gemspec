@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "cli_test_one/version"
+require "austin_swing_syndicate/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "cli_test_one"
-  spec.version       = CliTestOne::VERSION
+  spec.name          = "austin_swing_syndicate"
+  spec.version       = AustinSwingSyndicate::VERSION
   spec.authors       = ["'nathanielgcowan'"]
   spec.email         = ["'nathaniel.g.cowan@gmail.com'"]
 
