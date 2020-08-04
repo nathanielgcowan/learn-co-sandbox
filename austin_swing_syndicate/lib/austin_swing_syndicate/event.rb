@@ -1,28 +1,22 @@
-class AustinSwingSyndicate::Detail
-  attr_accessor :name, :Event, :url, :key_info
+class AustinSwingSyndicate::Event
+  attr_accessor :name, :ref, :events
   @@all = []
    
-  def initialize(name, Event, url)
-    @name = name
-    @Event = Event
-    @url = url
-    @key_info = []
-    # notify Event about the Detail
-    add_to_Event
-    save
-  end 
-  
-  def self.all 
-    @@all 
+  # def initialize(name, ref)
+  #   @name = name
+  #   @ref = ref
+  #   @events = []
+  #   save
+  # end 
+ 
+  def self.all
+    AustinSwingSyndicate::Scraper.scrape_events if @@all.empty?
+    @@all
   end
   
-  def add_to_Event
-    @Event.Details << self unless @Event.Details.include?(self)
-  end 
-  
-  def get_Detail_informations
-    AustinSwingSyndicate::Scraper.scrape_key_info(self) if @key_info.empty?
-  end 
+  # def get_events
+  #   AustinSwingSyndicate::Scraper.scrape_events(self) if @events.empty?
+  # end
   
   def save
     @@all << self

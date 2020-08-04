@@ -1,35 +1,35 @@
 class AustinSwingSyndicate::Scraper 
-  def self.scrape_Events 
+  def self.scrape_months 
     doc = Nokogiri::HTML(open("https://www.edenproject.com/visit/whats-on"))
     
-    Events = doc.css("select#edit-date-filter-Event option") 
+    months = doc.css("select#edit-date-filter-month option") 
     
-    Events.each do |m|
+    months.each do |m|
        name = m.text
        ref = m.attr("value")
-       AustinSwingSyndicate::Event.new(name, ref)
+       AustinSwingSyndicate::Month.new(name, ref)
     end 
   end 
   
-  def self.scrape_Details(Event)
-      url = "https://www.edenproject.com/visit/whats-on?date_filter_type=Event&date_filter_Event=#{Event.ref}"
+  def self.scrape_events(month)
+      url = "https://www.edenproject.com/visit/whats-on?date_filter_type=month&date_filter_month=#{month.ref}"
       doc = Nokogiri::HTML(open(url))
       
-      Details = doc.css("ul.boxes.cf li")
-      Details.each do |e|
+      events = doc.css("ul.boxes.cf li")
+      events.each do |e|
         title = e.css("span.teaser_caption-inner").text.strip
         url = e.css("a").attr("href").value
-        AustinSwingSyndicate::Detail.new(title, Event, url)
+        AustinSwingSyndicate::Event.new(title, month, url)
       end 
   end
   
-  def self.scrape_key_info(Detail)
-    url = "https://www.edenproject.com#{Detail.url}"
+  def self.scrape_key_info(event)
+    url = "https://www.edenproject.com#{event.url}"
     doc = Nokogiri::HTML(open(url))
     lis = doc.css("div.highlight_content li")
     lis.each do |li|
       info = li.text.strip
-      Detail.key_info << info
+      event.key_info << info
     end 
   end 
 end 

@@ -7,66 +7,66 @@ class AustinSwingSyndicate::CLI
   @@white="\e[0m"
   
   def call 
-    puts "\n#{@@grn}Welcome to Austin Swing Syndicate!#{@@white}\n"
+    puts "\n#{@@grn}Welcome to Austin Swing Syndicate!!#{@@white}\n"
     @input = ""
     until @input == "exit"
-      get_Events
-      list_Events
-      get_user_Event
+      get_events
+      list_months
+      get_user_month
       what_next
     end 
     goodbye
   end
   
-  def get_Events
-    @Events = AustinSwingSyndicate::Event.all
+  def get_events
+    @months = AustinSwingSyndicate::Month.all
   end
   
-  def list_Events
-    puts 'Choose a Event to see Details.'
-    @Events.each.with_index(1) do |Event, index| 
-      puts "#{index}. #{Event.name}"
+  def list_months
+    puts 'Choose a month to see events.'
+    @months.each.with_index(1) do |month, index| 
+      puts "#{index}. #{month.name}"
     end
   end
   
-  def get_user_Event
-    chosen_Event = gets.strip.to_i
-    show_Details_for(chosen_Event) if valid_input(chosen_Event, @Events)
+  def get_user_month
+    chosen_month = gets.strip.to_i
+    show_events_for(chosen_month) if valid_input(chosen_month, @months)
   end 
   
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0
   end 
   
-  def show_Details_for(chosen_Event)
-    Event = @Events[chosen_Event - 1]
-    Event.get_Details
-    puts "Here are Details for #{Event.name}"
-    Event.Details.each.with_index(1) do |Detail, idx|
-      puts "#{idx}. #{Detail.name}"
+  def show_events_for(chosen_month)
+    month = @months[chosen_month - 1]
+    month.get_events
+    puts "Here are events for #{month.name}"
+    month.events.each.with_index(1) do |event, idx|
+      puts "#{idx}. #{event.name}"
     end
-    get_user_Detail(Event)
+    get_user_event(month)
   end
   
-  def get_user_Detail(Event)
-    puts "Choose an Detail to see more informations."
+  def get_user_event(month)
+    puts "Choose an event to see more details."
     input = gets.strip
-    Detail = Event.Details[input.to_i - 1]
-    Detail.get_Detail_informations
-    show_Detail_informations(Detail)
+    event = month.events[input.to_i - 1]
+    event.get_event_details
+    show_event_details(event)
   end
   
-  def show_Detail_informations(Detail)
-    puts Detail.name
-    Detail.key_info.each {|i| puts "- #{i}"}
+  def show_event_details(event)
+    puts event.name
+    event.key_info.each {|i| puts "- #{i}"}
   end 
   
   def what_next
-    puts "Are you done? Type 'exit' to exit or hit any key to see more Details."
+    puts "Are you done? Type 'exit' to exit or hit any key to see more events."
     @input = gets.strip
   end 
   
   def goodbye
-    puts "Enjoy Austin Swing Syndicate!"
+    puts "Enjoy Eden!"
   end 
 end
