@@ -5,7 +5,6 @@ class AustinSwingSyndicate::Scraper
     
     events.each do |event|
       name = event.text
-      traits = event.css("div").attr("footer")
       AustinSwingSyndicate::Event.new(name)
     end
   end
