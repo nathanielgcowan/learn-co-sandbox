@@ -27,6 +27,6 @@ class AustinSwingSyndicate::CLI
   
   def show_announcements_for(chosen_event)
     event = @events[chosen_event - 1]
-    puts "Here are our announcements for #{event}"
+    puts "Here are our announcements for #{event.name}"
   end
 end
