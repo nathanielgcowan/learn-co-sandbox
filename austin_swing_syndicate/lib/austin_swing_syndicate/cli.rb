@@ -7,13 +7,12 @@ class AustinSwingSyndicate::CLI
   end
   
   def gets_events
-    puts "Choose an event for more information"
-    @events= AustinSwingSyndicate::Event.all
+    @events = AustinSwingSyndicate::Event.all
   end
   
   def list_events
     @events.each.with_index(1) do |event, index|
-      puts "#{index}. #{event}"
+      puts "#{index}. #{event.name}"
     end
   end
   

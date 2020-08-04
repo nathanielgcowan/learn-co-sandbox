@@ -1,13 +1,19 @@
 class AustinSwingSyndicate::Event
-  @@all = ["A", "B","C"]
+  @@all = []
   
   attr_accessor :name
   
   def initialize(name)
-    @name=name
+    @name = name
+    save
+  end
+
+  def self.all
+    AustinSwingSyndicate::Scraper.scrape_events if @@all.empty?
+    @@all
   end
   
-  def self.all
-    @@all
+  def save
+    @@all << self
   end
 end
