@@ -8,7 +8,7 @@ class AustinSwingSyndicate::CLI
   
   def gets_events
     puts "Choose an event for more information"
-    @events= [ "J", "A", "S", "D"]
+    @events= AustinSwingSyndicate::Event.all
   end
   
   def list_events
@@ -29,6 +29,5 @@ class AustinSwingSyndicate::CLI
   def show_announcements_for(chosen_event)
     event = @events[chosen_event - 1]
     puts "Here are our announcements for #{event}"
-    binding.pry
   end
 end
