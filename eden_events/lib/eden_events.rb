@@ -1,12 +1,4 @@
-require_relative "./eden_events/version"
-require_relative "./eden_events/cli"
-require_relative "./eden_events/month"
-require_relative "./eden_events/event"
-require_relative "./eden_events/scraper"
-
-require "pry"
-require "nokogiri"
-require "open-uri"
+require "eden_events/version"
 
 module EdenEvents
   class Error < StandardError; end
