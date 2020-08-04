@@ -35,8 +35,6 @@ class AustinSwingSyndicate::CLI
   
   def show_announcements_for(chosen_event)
     event = @events[chosen_event - 1]
-    AustinSwingSyndicate::Announcements.new("cool_event", event)
-    AustinSwingSyndicate::Announcements.new("uncool_event", event)
-    puts "Here are our announcements for #{event.name}"
+    puts "\n#{@@blu}Here are our announcements for #{event.name}#{@@white}"
   end
 end

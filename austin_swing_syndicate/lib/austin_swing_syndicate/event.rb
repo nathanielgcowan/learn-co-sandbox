@@ -3,8 +3,9 @@ class AustinSwingSyndicate::Event
   
   attr_accessor :name, :announcements
   
-  def initialize(name)
+  def initialize(title)
     @name = name
+    @announcements = []
     save
   end
 
@@ -15,7 +16,6 @@ class AustinSwingSyndicate::Event
   
   def announcements
     AustinSwingSyndicate::Scraper.scrape_events(self) if @@announcements.empty?
-    @announcements
   end
   
   def save
