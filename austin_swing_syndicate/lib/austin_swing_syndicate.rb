@@ -1,13 +1,13 @@
 require_relative "./austin_swing_syndicate/version"
 require_relative "./austin_swing_syndicate/cli"
-require_relative "./austin_swing_syndicate/event"
-require_relative "./austin_swing_syndicate/scraper"
-require_relative "./austin_swing_syndicate/announcements"
+# require_relative "./austin_swing_syndicate/event"
+# require_relative "./austin_swing_syndicate/scraper"
+# require_relative "./austin_swing_syndicate/announcements"
 
 
 require 'pry'
-require 'nokogiri'
-require 'open-uri'
+# require 'nokogiri'
+# require 'open-uri'
 
 module AustinSwingSyndicate
   class Error < StandardError; end

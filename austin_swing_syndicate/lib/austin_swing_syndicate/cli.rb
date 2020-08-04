@@ -8,7 +8,8 @@ class AustinSwingSyndicate::CLI
   # @@white="\e[0m"
   
   def call
-    puts "\n#{@@blu}Welcome to Austin Swing Syndicate!#{@@white}"
+    puts "Welcome to Austin Swing Syndicate!"
+    binding.pry
     # gets_events
     # list_events
     # get_user_event
