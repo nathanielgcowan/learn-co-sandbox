@@ -8,7 +8,7 @@ class AustinSwingSyndicate::CLI
   @@white="\e[0m"
   
   def call
-    puts "Welcome to Austin Swing Syndicate!"
+    puts "\n#{@@blu}Welcome to Austin Swing Syndicate!#{@@white}"
     gets_events
     list_events
     get_user_event
@@ -35,6 +35,8 @@ class AustinSwingSyndicate::CLI
   
   def show_announcements_for(chosen_event)
     event = @events[chosen_event - 1]
+    AustinSwingSyndicate::Announcements.new("cool_event", event)
+    AustinSwingSyndicate::Announcements.new("uncool_event", event)
     puts "Here are our announcements for #{event.name}"
   end
 end
