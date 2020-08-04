@@ -1,26 +1,26 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "eden_events/version"
+require "austin_swing_syndicate/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "eden_events"
-  spec.version       = EdenEvents::VERSION
-  spec.authors       = ["'Beth Schofield'"]
-  spec.email         = ["'bethmschofield@gmail.com'"]
+  spec.name          = "austin_swing_syndicate"
+  spec.version       = AustinSwingSyndicate::VERSION
+  spec.authors       = ["'NathanielCowan'"]
+  spec.email         = ["'nathaniel.g.cowan@gmail.com'"]
 
-  spec.summary       = %q{oeioeuieu}
-  spec.description   = %q{oeuieui}
-  spec.homepage      = "http://www.bob.com"
+  spec.summary       = %q{this is for room}
+  spec.description   = %q{this is for room}
+  spec.homepage      = "http://austinswingsyndicate.org/events/"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "http://www.bob.com"
+    spec.metadata["allowed_push_host"] = "http://austinswingsyndicate.org/events/"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "http://www.bob.com"
-    spec.metadata["changelog_uri"] = "http://www.bob.com"
+    spec.metadata["source_code_uri"] = "http://austinswingsyndicate.org/events/"
+    spec.metadata["changelog_uri"] = "http://austinswingsyndicate.org/events/"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
