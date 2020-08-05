@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/austin_swing_syndicate'
-
-AustinSwingSyndicate::CLI.new.call
