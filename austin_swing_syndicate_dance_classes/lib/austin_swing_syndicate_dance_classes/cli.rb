@@ -28,6 +28,6 @@ class AustinSwingSyndicateDanceClasses::CLI
   
   def give_info_for(chosen_party)
     party = @parties[chosen_party- 1]
-    puts "Here's the details for you!! here for #{party}?"
+    puts "Here's the details for you!! here for #{party.name}?"
   end
 end
