@@ -1,34 +1,33 @@
 class AustinSwingSyndicateDanceClasses::CLI
-  
   def call
-    puts "greeting text"
-    show_nights
-    seen_nights
-    picked_party
+    puts "Welcome to Austin Swing Syndicate"
+    get_party
+    list_party
+    show_answer
   end
   
-  def show_nights
+  def get_party
     @parties = AustinSwingSyndicateDanceClasses::Party.all
   end
   
-  def seen_nights
-    print "Which would you like?"
-    @parties.each.with_index(1) do |party,index|
+  def list_party
+    puts "Which would you like?"
+    @parties.each.with_index(1) do |party, index|
       puts "#{index}. #{party.name}"
     end
   end
   
-  def picked_party
-    going_to_party = gets.strip.to_i
-    we_then_describe_the_iteria(going_to_party) if pressed(going_to_party, @parties)
+  def show_answer
+    chosen_party = gets.strip.to_i
+    give_info_for(chosen_party) if valid_input(chosen_party, @parties)
   end
   
-  def pressed(pick, choice)
-    pick.to_i <= choice.length && pick.to_i > 0
+  def valid_input(input, data)
+    input.to_i <= data.length && input.to_i > 0
   end
   
-  def explain_the_details_to_the_poor_man(going_to_party)
-    party = @parties[going_to_party - 1]
-    print "Here's the details for you!! Hope to see you there?"
+  def give_info_for(chosen_party)
+    party = @parties[chosen_party- 1]
+    puts "Here's the details for you!! here for #{party}?"
   end
 end

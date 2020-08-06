@@ -1,6 +1,5 @@
-class AustinSwingSyndicateDanceClasses::party
+class AustinSwingSyndicateDanceClasses::Party
   @@all =[]
-  
   attr_accessor :name
   
   def initialize(name)
@@ -9,6 +8,7 @@ class AustinSwingSyndicateDanceClasses::party
   end
   
   def self.all
+    AustinSwingSyndicateDanceClasses::Scraper.scrape_parties if @@all.empty?
     @@all
   end
   

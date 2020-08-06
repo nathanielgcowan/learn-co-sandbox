@@ -1,13 +1,10 @@
 class AustinSwingSyndicateDanceClasses::Scraper
-  def self.source
+  def self.scrape_parties
     doc = Nokogiri::HTML(open("http://austinswingsyndicate.org/events/"))
-    binding.pry
-    
-  #   things = doc.css("div.slide-content")
-  # end
-  #   party.each do |for_result|
-  #       party = for_result.text
-  #       AustinSwingSyndicateDanceClasses::Dates.new(party)
-  #   end
+    parties = doc.css("div.slide-content")
+    parties.each do |n|
+        name = n.css("h3.slide-entry-title.entry-title a").text
+        AustinSwingSyndicateDanceClasses::Party.new(name)
+    end
   end
 end
