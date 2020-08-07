@@ -1,10 +1,10 @@
 class AustinSwingSyndicateDanceClasses::Party
+  attr_accessor :name, :descriptions
   @@all =[]
-  attr_accessor :name :description
   
   def initialize(name)
     @name = name
-    @description = []
+    @descriptions = []
     save
   end
   
@@ -13,9 +13,8 @@ class AustinSwingSyndicateDanceClasses::Party
     @@all
   end
   
-  def description
-    AustinSwingSyndicateDanceClasses::Scraper.scrape_description if @@all.empty?
-    @description
+  def retrieve_description
+    AustinSwingSyndicateDanceClasses::Scraper.scrape_descriptions(self) if @descriptions.empty?
   end
   
   def save
