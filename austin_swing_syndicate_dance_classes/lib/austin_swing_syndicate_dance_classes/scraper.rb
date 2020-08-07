@@ -5,7 +5,7 @@ class AustinSwingSyndicateDanceClasses::Scraper
     parties.each do |n|
         name = n.css("h3.slide-entry-title.entry-title a").text
         description = n.css("div.slide-entry-excerpt.entry-content").text
-        date= n.css("div.slide-meta time.slide-meta-time.updated").text
+        date= n.next_element.css("div.slide-meta time").text
         AustinSwingSyndicateDanceClasses::Party.new(name,description,date)
     end
   end
