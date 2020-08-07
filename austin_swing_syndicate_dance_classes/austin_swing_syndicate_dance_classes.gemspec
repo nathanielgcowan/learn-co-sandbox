@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'nathanielgcowan'"]
   spec.email         = ["'nathaniel.g.cowan@gmail.com'"]
 
-  spec.summary       = %q{meant to help you dance}
-  spec.description   = %q{Meant to help you dance}
+  spec.summary       = %q{This is my short summary of my gemspec. I am writing one because I am supposed to do so. This is what is written down and what I know to put here.}
+  spec.description   = %q{This is the description of gem Austin Swing Syndicate. It is meant to help people in Austin meet others that want to learn swing dancing.}
   spec.homepage      = "http://austinswingsyndicate.org/"
   spec.license       = "MIT"
 

@@ -1,9 +1,6 @@
 # AustinSwingSyndicateDanceClasses
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/austin_swing_syndicate_dance_classes`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+Austin Swing Syndiacte helpers people within the city connect with others that want to dance. This gem is a way to give participatns a list of information for the parties they are interested in going to with the date at which it will occur.
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +19,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TO use this gem, run './bin/austin_swing_syndicate_dance_classes' in the terminal to get started.
+this pick and option for the given menu of options listed from one through nine.
+You will then have your description.
+run 
 
 ## Development
 
