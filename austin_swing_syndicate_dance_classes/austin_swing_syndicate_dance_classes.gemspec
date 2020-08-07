@@ -11,21 +11,21 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{This is my short summary of my gemspec. I am writing one because I am supposed to do so. This is what is written down and what I know to put here.}
   spec.description   = %q{This is the description of gem Austin Swing Syndicate. It is meant to help people in Austin meet others that want to learn swing dancing.}
-  spec.homepage      = "http://austinswingsyndicate.org/"
+  spec.homepage      = "https://github.com/nathanielgcowan/learn-co-sandbox/tree/master/austin_swing_syndicate_dance_classes"
   spec.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "'http://mygemserver.com'"
+  # # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # # to allow pushing to a single host or delete this section to allow pushing to any host.
+  # if spec.respond_to?(:metadata)
+  #   spec.metadata["allowed_push_host"] = "'http://mygemserver.com'"
 
-    spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "http://austinswingsyndicate.org/"
-    spec.metadata["changelog_uri"] = "http://austinswingsyndicate.org/"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  #   spec.metadata["homepage_uri"] = spec.homepage
+  #   spec.metadata["source_code_uri"] = "http://austinswingsyndicate.org/"
+  #   spec.metadata["changelog_uri"] = "http://austinswingsyndicate.org/"
+  # else
+  #   raise "RubyGems 2.0 or newer is required to protect against " \
+  #     "public gem pushes."
+  # end
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
