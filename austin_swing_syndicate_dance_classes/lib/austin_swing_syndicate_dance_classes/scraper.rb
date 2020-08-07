@@ -9,7 +9,5 @@ class AustinSwingSyndicateDanceClasses::Scraper
   end
   
   def self.scrape_descriptions(party)
-    AustinSwingSyndicateDanceClasses::Description.new("cool event", party)
-    AustinSwingSyndicateDanceClasses::Description.new("uncool event", party)
   end
 end
