@@ -32,6 +32,7 @@ class AustinSwingSyndicateDanceClasses::CLI
     party.get_descriptions
     puts "Here's the details for you!! here for #{party.name}?"
     party.descriptions.each.with_index(1) do |description, idx|
+      puts "#{idx} . #{description.name}"
     end
   end
 end

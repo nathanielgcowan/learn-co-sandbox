@@ -9,5 +9,6 @@ class AustinSwingSyndicateDanceClasses::Scraper
   end
   
   def self.scrape_descriptions(party)
+    AustinSwingSyndicateDanceClasses::Description.new("one", party)
   end
 end

@@ -13,9 +13,9 @@ class AustinSwingSyndicateDanceClasses::Party
     @@all
   end
 
-  
   def get_descriptions
     AustinSwingSyndicateDanceClasses::Scraper.scrape_descriptions(self) if @descriptions.empty?
+    @descriptions
   end
   
   def save
