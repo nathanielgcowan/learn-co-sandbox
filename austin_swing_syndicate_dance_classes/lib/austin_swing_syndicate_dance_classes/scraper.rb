@@ -4,11 +4,9 @@ class AustinSwingSyndicateDanceClasses::Scraper
     parties = doc.css("div.slide-content")
     parties.each do |n|
         name = n.css("h3.slide-entry-title.entry-title a").text
-        AustinSwingSyndicateDanceClasses::Party.new(name)
+        description = n.css("div.slide-entry-excerpt.entry-content").text
+        date= n.css("div.slide-meta time.slide-meta-time.updated").text
+        AustinSwingSyndicateDanceClasses::Party.new(name,description,date)
     end
-  end
-  
-  def self.scrape_descriptions(party)
-    AustinSwingSyndicateDanceClasses::Description.new("one", party)
   end
 end

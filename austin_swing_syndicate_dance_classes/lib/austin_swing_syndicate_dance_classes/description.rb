@@ -1,10 +1,11 @@
 class AustinSwingSyndicateDanceClasses::Description
-  attr_accessor :name, :descriptions
+  attr_accessor :name, :party
   @@all =[]
   
-  def initialize(name, description)
+  def initialize(name, party)
     @name = name
-    @description = description
+    @party = party
+    add_to_party
     save
   end
   
@@ -12,8 +13,9 @@ class AustinSwingSyndicateDanceClasses::Description
     @@all
   end
   
-  def add_to_description
-    @party.descriptions << self unless @party.descriptions include?(self)
+  def add_to_party
+    binding.pry
+    @party.descriptions << self unless @party.descriptions.include?(self)
   end
   
   def save

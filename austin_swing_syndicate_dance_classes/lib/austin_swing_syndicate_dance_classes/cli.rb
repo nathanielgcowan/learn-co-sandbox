@@ -1,7 +1,7 @@
 class AustinSwingSyndicateDanceClasses::CLI
   
   def call
-    puts "Welcome to Austin Swing Syndicate"
+    puts "Welcome to Austin Swing Syndicate!"
     get_party
     list_party
     show_answer
@@ -28,11 +28,11 @@ class AustinSwingSyndicateDanceClasses::CLI
   end
   
   def give_info_for(chosen_party)
+
     party = @parties[chosen_party- 1]
-    party.get_descriptions
+    party.description
     puts "Here's the details for you!! here for #{party.name}?"
-    party.descriptions.each.with_index(1) do |description, idx|
-      puts "#{idx} . #{description.name}"
-    end
+    puts party.description
+    puts party.date
   end
 end

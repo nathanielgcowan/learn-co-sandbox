@@ -1,21 +1,17 @@
 class AustinSwingSyndicateDanceClasses::Party
-  attr_accessor :name, :descriptions
+  attr_accessor :name, :description, :date
   @@all =[]
   
-  def initialize(name)
+  def initialize(name,description, date)
     @name = name
-    @descriptions = []
+    @description = description
+    @date = date
     save
   end
   
   def self.all
     AustinSwingSyndicateDanceClasses::Scraper.scrape_parties if @@all.empty?
     @@all
-  end
-
-  def get_descriptions
-    AustinSwingSyndicateDanceClasses::Scraper.scrape_descriptions(self) if @descriptions.empty?
-    @descriptions
   end
   
   def save
