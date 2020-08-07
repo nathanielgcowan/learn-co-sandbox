@@ -28,9 +28,10 @@ class AustinSwingSyndicateDanceClasses::CLI
   
   def give_info_for(chosen_party)
     party = @parties[chosen_party- 1]
+    AustinSwingSyndicateDanceClasses::Description.new("cool event", party)
+    AustinSwingSyndicateDanceClasses::Description.new("uncool event", party)
+    descriptions = party.descriptions
     puts "Here's the details for you!! here for #{party.name}?"
-    party.descriptions.each.with.index do |party, idx|
-      puts party.name
-    end
+    binding.pry
   end
 end

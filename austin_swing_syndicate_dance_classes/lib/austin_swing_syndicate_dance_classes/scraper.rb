@@ -7,9 +7,4 @@ class AustinSwingSyndicateDanceClasses::Scraper
         AustinSwingSyndicateDanceClasses::Party.new(name)
     end
   end
-  
-  def self.scrape_descriptions(party)
-    AustinSwingSyndicateDanceClasses::Party.new("thing", party)
-    AustinSwingSyndicateDanceClasses::Party.new("thing", party)
-  end
 end
