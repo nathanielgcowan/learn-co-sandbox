@@ -1,7 +1,16 @@
 class AustinSwingSyndicateDanceClasses::CLI
   
   def call
-    puts "Welcome to Austin Swing Syndicate!"
+    puts "
+   ____                          ___,                         
+  (|   \                        /   |              o          
+   |    |__,   _  _   __  _    |    |          ,_|_    _  _   
+  _|    /  |  / |/ | /   |/    |    |  |   |  / \| |  / |/ |  
+ (/\___/\_/|_/  |  |_\___|__/   \__/\_/ \_/|_/ \/|_|_/  |  |_/
+                                                              
+                                                              
+"
+    puts "Hello and welcome to Austin Swing Syndicate. We encourage others to learn how to swing dance."
     get_party
     list_party
     show_answer
@@ -12,7 +21,7 @@ class AustinSwingSyndicateDanceClasses::CLI
   end
   
   def list_party
-    puts "Which would you like?"
+    puts "Here are the available parties. Choose one below to see more information?"
     @parties.each.with_index(1) do |party, index|
       puts "#{index}. #{party.name}"
     end
@@ -31,7 +40,7 @@ class AustinSwingSyndicateDanceClasses::CLI
 
     party = @parties[chosen_party- 1]
     party.description
-    puts "Here's the details for you!! here for #{party.name}?"
+    puts "Awesome choice!Feel free to read more about #{party.name}?"
     puts party.description
     puts party.date
   end
