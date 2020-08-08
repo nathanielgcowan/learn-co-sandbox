@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "austin_swing_syndicate_dance_classes/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "austin_swing_syndicate_dance_classes"
+  spec.name          = "austin_swing_syndicate_dance_clases"
   spec.version       = AustinSwingSyndicateDanceClasses::VERSION
   spec.authors       = ["'nathanielgcowan'"]
   spec.email         = ["'nathaniel.g.cowan@gmail.com'"]
 
   spec.summary       = %q{This is my short summary of my gemspec. I am writing one because I am supposed to do so. This is what is written down and what I know to put here.}
-  spec.description   = %q{This is the description of gem Austin Swing Syndicate. It is meant to help people in Austin meet others that want to learn swing dancing.}
+  spec.description   = %q{This is the description of It is meant to help people in Austin meet others that want to learn swing dancing.}
   spec.homepage      = "https://github.com/nathanielgcowan/learn-co-sandbox/tree/master/austin_swing_syndicate_dance_classes"
   spec.license       = "MIT"
 
