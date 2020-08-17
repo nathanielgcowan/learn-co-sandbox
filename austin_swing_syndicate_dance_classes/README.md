@@ -1,6 +1,7 @@
 # AustinSwingSyndicateDanceClasses
 
 Austin Swing Syndiacte helpers people within the city connect with others that want to dance. This gem is a way to give participatns a list of information for the parties they are interested in going to with the date at which it will occur.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -19,10 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TO use this gem, run './bin/austin_swing_syndicate_dance_classes' in the terminal to get started.
-this pick and option for the given menu of options listed from one through nine.
-You will then have your description.
-run 
+TODO: Write usage instructions here
 
 ## Development
 

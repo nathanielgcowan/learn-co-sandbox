@@ -29,7 +29,13 @@ class AustinSwingSyndicateDanceClasses::CLI
   
   def show_answer
     chosen_party = gets.strip.to_i
-    give_info_for(chosen_party) if valid_input(chosen_party, @parties)
+    if valid_input(chosen_party, @parties)
+      give_info_for(chosen_party)
+    else
+      puts "Oops! Wrong answer. Please try again".red
+      list_party
+      show_answer
+    end
   end
   
   def valid_input(input, data)
@@ -40,7 +46,7 @@ class AustinSwingSyndicateDanceClasses::CLI
 
     party = @parties[chosen_party- 1]
     party.description
-    puts "Awesome choice!Feel free to read more about #{party.name}?"
+    puts "Awesome choice!Feel free to read more about #{party.name} Would you like to look at another?".green 
     puts party.description
     puts party.date
   end

@@ -7,6 +7,7 @@ require_relative "./austin_swing_syndicate_dance_classes/scraper"
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
 
 module AustinSwingSyndicateDanceClasses
   class Error < StandardError; end
