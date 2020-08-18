@@ -28,7 +28,7 @@ class AustinSwingSyndicateDanceClasses::CLI
   def list_party
     puts "Here are the available parties. Choose one below to see more information?".blue
     new_list = []
-    @parties.each do |party|
+    @parties.map do |party|
       new_list << "#{party.name}"
     end
     new_list.sort.each.with_index(1) do |i, index|
