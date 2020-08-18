@@ -22,7 +22,7 @@ class AustinSwingSyndicateDanceClasses::CLI
   end
   
   def get_description
-    @description = AustinSwingSyndicateDanceClasses::Description.all
+    @descriptions = AustinSwingSyndicateDanceClasses::Description.all
   end
   
   def list_party
@@ -52,7 +52,6 @@ class AustinSwingSyndicateDanceClasses::CLI
   end
   
   def give_info_for(chosen_party)
-
     party = @parties[chosen_party- 1]
     party.description
     puts "Awesome choice!Feel free to read more about #{party.name} Would you like to look at another?".green 
