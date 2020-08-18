@@ -12,17 +12,12 @@ class AustinSwingSyndicateDanceClasses::CLI
 "
     puts "Hello and welcome to Austin Swing Syndicate. We encourage others to learn how to swing dance."
     get_party
-    get_description
     list_party
     show_answer
   end
   
   def get_party
     @parties = AustinSwingSyndicateDanceClasses::Party.all
-  end
-  
-  def get_description
-    @descriptions = AustinSwingSyndicateDanceClasses::Description.all
   end
   
   def list_party
