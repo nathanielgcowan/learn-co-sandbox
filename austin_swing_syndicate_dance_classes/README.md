@@ -1,6 +1,6 @@
 # AustinSwingSyndicateDanceClasses
 
-######Austin Swing Syndiacte helpers people within the city connect ######with others that want to dance. This gem is a way to give ######participatns a list of information for the parties they are ######interested in going to with the date at which it will occur.
+Austin Swing Syndiacte helpers people within the city connect with others that want to dance. This gem is a way to give participatns a list of information for the parties they are interested in going to with the date at which it will occur.
 
 # Navigate
 
@@ -54,11 +54,11 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-##Fork this repository
+Fork this repository
 
 Fork this repository by clicking on the fork button on this page. This will make a duplicate copy of the repo.
 
-##Clone the repository
+Clone the repository
 Now clone the forked repo
 Github > open the forked repo, clikck on the clone buttom and click copy to clipboard.
 
