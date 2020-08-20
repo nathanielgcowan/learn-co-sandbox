@@ -20,6 +20,9 @@ class AustinSwingSyndicateDanceClasses::CLI
     @parties = AustinSwingSyndicateDanceClasses::Party.all
   end
   
+  def get_options
+    
+  end
   def list_party
     puts "Here are the available parties. Choose one below to see more information?".blue
     my_statements = []
@@ -52,5 +55,10 @@ class AustinSwingSyndicateDanceClasses::CLI
     puts "Awesome choice!Feel free to read more about #{party.name} Would you like to look at another?".green 
     puts party.description
     puts party.date
+    puts "Would you like to see another? Yes or No"
+      want_to_see_more = gets.strip
+      # if "yes"
+      # list_party
+      # show_answer
   end
 end
