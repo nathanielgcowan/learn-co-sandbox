@@ -1,5 +1,6 @@
 # AustinSwingSyndicateDanceClasses
 
+##Description
 Austin Swing Syndiacte helpers people within the city connect with others that want to dance. This gem is a way to give participatns a list of information for the parties they are interested in going to with the date at which it will occur.
 
 # Navigate
@@ -54,18 +55,29 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Fork this repository
+**Fork this repository**
 
-Fork this repository by clicking on the fork button on this page. This will make a duplicate copy of the repo.
+Fork this repository by clicking on the fork button on the page on GitHub. This will make a duplicate copy of the repo.
 
-Clone the repository
+**Clone the repository**
+
 Now clone the forked repo
 Github > open the forked repo, clikck on the clone buttom and click copy to clipboard.
 
 Open your terminal and run
 
 ```ruby
-git clone "url you just copied"
+git clone "https://github.com/nathanielgcowan/learn-co-sandbox.git"
+```
+
+**Create a branch**
+
+```ruby
+cd austin_swing_syndicate_dance_classes
+```
+then use
+```ruby
+git checkout
 ```
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/'nathanielgcowan'/austin_swing_syndicate_dance_classes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
