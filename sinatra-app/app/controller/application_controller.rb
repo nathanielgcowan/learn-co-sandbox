@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
     end 
     
     def login(email)
+      # Is the user who they claim to be
       session[:email] - email
     end
   end 
