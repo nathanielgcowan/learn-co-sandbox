@@ -1,0 +1,13 @@
+#you need to mount your sessesions_controller in order for this to work. go to config.ru
+#authentication is about remembering who the person is. we make a formto find their email address.
+<h1>Login</h1>
+
+<form action= "/sessions" method= "POST">
+  #when I make a form the most importatn part is the form action because is the part that determines where the information will go when submitted.
+  <p>
+    <label for="email">Email:</label>
+    <input type="text" name "email" id="email" />
+  </p>
+  
+  <input type="submit" />
+</form>
