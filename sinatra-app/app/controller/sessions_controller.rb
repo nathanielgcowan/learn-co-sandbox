@@ -6,13 +6,15 @@ class SessionsController < ApplicationController
   
   
   post '/sessions' do
-    ##raise params[:email].inspect
-    #this routes is processing their login
-    #the goal is to get their data to session
-    session [:email] = params[:email]
-    ##raise session params[:email].inspect
-    #then bring them to post
+    #login in a user with this email
+    login(params[:email])
     redirect '/posts'
-  end 
+  end
+  
+  get '/logout' do 
+      #all we do to logout is clear the session 
+    logout!
+    redirect '/posts'
+  end
   
 end 
