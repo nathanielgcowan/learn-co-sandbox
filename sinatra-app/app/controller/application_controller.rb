@@ -21,10 +21,16 @@ class ApplicationController < Sinatra::Base
   helpers do 
     
     def logged_in?
+      !!current_user
       #otherwise 
       #return false or refirect '/login'
       #Is the user who they claim to be
-      !!session[:email] ##this !! is a pattern in ruby for truthiness
+      # !!session[:email] ##this !! is a pattern in ruby for truthiness
+    end 
+    
+    def current_user 
+      @current_user ||= User.find_by(:email => session[:email]) if session[:email]
+      #if you were able to be found by an email, logged in by an email or just on, we can determine that you are the current user
     end 
     
 <<<<<<< HEAD

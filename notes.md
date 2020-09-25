@@ -26,5 +26,11 @@ rake db:migrate
 4. #rake db:create_migration NAME=create_posts
 5. 
 rake db:migrate
-=======
->>>>>>> cb957afcbb5d59fe8239884cf58d7706b5cfabd3
+
+# u.posts.build(:title-->
+# p =
+# p 
+# u.save 
+# p 
+
+

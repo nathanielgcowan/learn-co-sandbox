@@ -18,7 +18,14 @@ class PostController < ApplicationController
     if !logged_in?  
       redirect "/login" #Redirecting if they are not
     else
-      "An edit post form" #Rendering if they are
+      
+      # How do I find the post that only the author user is allowed to edit
+        post = Post.find(params[:id])
+        if post.user id == current_user.id
+          "An edit post form #{current_user.id} is editing #{post.id}" #Rendering if they are
+        else 
+          redirect '/posts'
+        end 
     end
   end 
 end 
