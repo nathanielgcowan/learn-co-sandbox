@@ -22,3 +22,6 @@ rake db:migrate
 1. Build my user registration process (signup form and dignup creation)
 2. give posts to user 
 3. only let them edit posts they made 
+4. #rake db:create_migration NAME=create_posts
+5. 
+rake db:migrate
