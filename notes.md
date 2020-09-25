@@ -18,3 +18,7 @@ for more information look at ActiveRecord online.
 # rake db:create migration name add_passwords_to_users
 rake db:migrate
 #
+
+1. Build my user registration process (signup form and dignup creation)
+2. give posts to user 
+3. only let them edit posts they made 
