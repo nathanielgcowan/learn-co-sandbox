@@ -14,6 +14,7 @@
 
 ActiveRecord comes with a great way to secure passwords.
 for more information look at ActiveRecord online.
+<<<<<<< HEAD
 
 # rake db:create migration name add_passwords_to_users
 rake db:migrate
@@ -25,3 +26,5 @@ rake db:migrate
 4. #rake db:create_migration NAME=create_posts
 5. 
 rake db:migrate
+=======
+>>>>>>> cb957afcbb5d59fe8239884cf58d7706b5cfabd3

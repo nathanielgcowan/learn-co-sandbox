@@ -27,6 +27,7 @@ class ApplicationController < Sinatra::Base
       !!session[:email] ##this !! is a pattern in ruby for truthiness
     end 
     
+<<<<<<< HEAD
     def login(email, password)
       #check if a user with this email actually exists
       # if so, set the session 
@@ -34,6 +35,14 @@ class ApplicationController < Sinatra::Base
       user= User.find_by(:email => email) 
       if user && user.authenticate(password) #if-statement assignment. so "if the user is assigned to the user object. then the user is assigned to then, labeled as true and set as an object."
           session[:email] = user.email
+=======
+    def login(email)
+      #check if a user with this email actually exists
+      # if so, set the session 
+      # Is the user who they claim to be
+      if user = User.find_by(:email => email) #if-statement assignment. so "if the user is assigned to the user object. then the user is assigned to then, labeled as true and set as an object."
+        session[:email] = user.email
+>>>>>>> cb957afcbb5d59fe8239884cf58d7706b5cfabd3
       else
         redirect "/login"
     end
