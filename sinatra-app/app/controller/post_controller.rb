@@ -20,9 +20,13 @@ class PostController < ApplicationController
     else
       
       # How do I find the post that only the author user 
-        post = current_user.posts.find(params[:id])
+      if post = current_user.posts.find(params[:id])
           "An edit post form #{current_user.id} is editing #{post.id}" #Rendering if they are
+      else
+        redirect '/posts'
+      end 
       #we cannot use include because it does not find all of our post
+      #Alternatively, we can also use find by method
     end
   end 
 end 
