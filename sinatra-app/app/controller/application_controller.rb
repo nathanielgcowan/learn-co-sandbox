@@ -30,10 +30,10 @@ class ApplicationController < Sinatra::Base
     
     def current_user 
       @current_user ||= User.find_by(:email => session[:email]) if session[:email]
+      #this is a good piece of code to talk about.
       #if you were able to be found by an email, logged in by an email or just on, we can determine that you are the current user
     end 
     
-<<<<<<< HEAD
     def login(email, password)
       #check if a user with this email actually exists
       # if so, set the session 
@@ -41,7 +41,7 @@ class ApplicationController < Sinatra::Base
       user= User.find_by(:email => email) 
       if user && user.authenticate(password) #if-statement assignment. so "if the user is assigned to the user object. then the user is assigned to then, labeled as true and set as an object."
           session[:email] = user.email
-=======
+
     def login(email)
       #check if a user with this email actually exists
       # if so, set the session 
