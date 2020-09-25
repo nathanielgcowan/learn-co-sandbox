@@ -10,3 +10,11 @@
 4. Change my login system to use their email and password to authenicate them
 5. 
 #rake db:create_migration NAME=create_users
+
+
+ActiveRecord comes with a great way to secure passwords.
+for more information look at ActiveRecord online.
+
+# rake db:create migration name add_passwords_to_users
+rake db:migrate
+#

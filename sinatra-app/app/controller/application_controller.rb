@@ -21,13 +21,23 @@ class ApplicationController < Sinatra::Base
   helpers do 
     
     def logged_in?
+      #otherwise 
+      #return false or refirect '/login'
+      #Is the user who they claim to be
       !!session[:email] ##this !! is a pattern in ruby for truthiness
     end 
     
-    def login(email)
+    def login(email, password)
+      #check if a user with this email actually exists
+      # if so, set the session 
       # Is the user who they claim to be
-      session[:email] - email
+      user= User.find_by(:email => email) 
+      if user && user.authenticate(password) #if-statement assignment. so "if the user is assigned to the user object. then the user is assigned to then, labeled as true and set as an object."
+          session[:email] = user.email
+      else
+        redirect "/login"
     end
+      session[:email] = email
   end 
   
   def logout!
