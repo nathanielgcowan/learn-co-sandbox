@@ -1,5 +1,8 @@
-# A sample Gemfile 
+# frozen_string_literal: true
+
 source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 gem 'sinatra'
@@ -8,11 +11,4 @@ gem 'activerecord', :require => "active_record"
 gem 'rake'
 gem 'pry'
 gem 'sinatra-activerecord'
-gem 'require_all'
-<<<<<<< HEAD
-# gem 'shotgun'
-# gem 'bcrypt', '-> 3.1.7'
-=======
 gem 'shotgun'
-gem 'bcrypt', '-> 3.1.7'
->>>>>>> cb957afcbb5d59fe8239884cf58d7706b5cfabd3
